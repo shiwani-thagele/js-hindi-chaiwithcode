@@ -49,6 +49,36 @@ function addTwoNum(number1 , number2){
 
   loginUserMessage("shivi") //nothing return
  //console.log(loginUserMessage("shiwani"));
- console.log(loginUserMessage("shiwani")); //undefined ,sam override by shiwani 
+ //console.log(loginUserMessage("shiwani")); //undefined ,sam override by shiwani 
 
- 
+
+ //rest operator / sprade operator
+ function calculatecartprice(val1,val2,...num1){
+    //val =222 , val2= 345 restvalues in num1 i.e. [678,2000]
+        return num1
+ }
+//console.log(calculatecartprice(222,456,678,2000)) //packed in bundle return  array = [222,345,678]
+
+const user = {
+    username :'shiwani',
+    prices:456
+}
+function handleuser(anyobject){
+     console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+ //handleuser(user)
+
+ handleuser(
+    {
+        username:"sam",
+        price:345
+    }
+ )
+
+  /* const mynewArray = [200,400,600,300]
+
+ function returnsecondVlaue(getArray){
+    return getArray[3]
+ }
+ console.log(returnsecondVlaue(mynewArray));
+ */
