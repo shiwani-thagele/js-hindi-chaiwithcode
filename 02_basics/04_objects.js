@@ -73,3 +73,42 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isloggedin')); //check for validation
 
+
+
+//objects destrtructuring and JSON API
+ const course = {
+    coursename :"js in hindi",
+    courseprice : "999",
+    courseInstructure : "hitesh"
+
+ }
+
+ //course.courseInstructure
+ //const {courseInstructure} = course
+ const{courseInstructure:instructor} = course //short form of courseinstructor object destructuring
+ //console.log(courseInstructure);
+ console.log(instructor);
+
+//in react same concept
+/* const navbar = ({company}) =>{
+
+}
+navbar(company = "softech") */
+
+//API'S
+//json strtcutre
+/**{
+   "name":"hitesh",
+   "course":"js in hindi",
+   "price":"free"
+} /*
+
+/** another way of json structure
+ * [
+    {},
+    {},
+    {},
+    {}
+]
+* https://jsonformatter.org/ for reference 
+*/
