@@ -57,3 +57,4 @@ console.log(addTwo(4,5)); //9
 // const myArray = [6,7,8,2,7,8] 
 
 // myArray.forEach(() => {})
+
