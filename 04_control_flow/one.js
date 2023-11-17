@@ -66,3 +66,7 @@ console.log("less than 500 ");
  if(loggedInFromGoogle || loggedInFromEmail ){
     console.log("user logged in");
  }
+
+
+
+ //https://www.guru99.com/difference-equality-strict-operator-javascript.html#:~:text=%3D%3D%20in%20JavaScript%20is%20used,datatype%20and%20compares%20two%20values.&text=Checks%20the%20equality%20of%20two,two%20operands%20with%20their%20types.
