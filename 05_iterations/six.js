@@ -26,4 +26,6 @@ console.log(newnums);//6,7,8,9,10
 
 */
 
+//rest exercise need a  database  of object , which is in chai aur code github repo.
+
 
