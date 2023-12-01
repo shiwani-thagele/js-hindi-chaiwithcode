@@ -2,3 +2,41 @@
 My learning of JS by Channel Chai aur code
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  * Relations 
+
