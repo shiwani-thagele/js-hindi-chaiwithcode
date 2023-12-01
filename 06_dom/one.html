@@ -20,8 +20,16 @@
 
 
     <div >
-        <h1 id=" title">dom (document object model) learning  from chai aur code</h1>
+        <h1 id=" title">dom (document object model) learning  from chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eos?</p>
+        <input type="text" class="password">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">foue</li>
+        </ul>
 
     </div>
 </body>
@@ -30,28 +38,101 @@
 <!-- 
     DOCUMENT Method's
 
-    document.getElementById('title') => <h1 id=" title">dom (document object model) learning  from chai aur code</h1>
+    * document.getElementById('title') => <h1 id=" title">dom (document object model) learning  from chai aur code</h1>
 
-    document.getElementById('title').id => 'title'
+    * document.getElementById('title').id => 'title'
 
-    document.getElementById('heading of the webpages').innerHTML => '<h1>chai aur code</h1>'
+    * document.getElementById('heading of the webpages').innerHTML => '<h1>chai aur code</h1>'
 
-    document.getElementById('title').class => undefined
+    * document.getElementById('title').class => undefined
 
-    document.getElementById('title').className => 'heading' (behind the scene it will take as className rather than class)
+    *  document.getElementById('title').className => 'heading' (behind the scene it will take as className rather than class)
 
-    document.getElementById('title').getAttribute() => argument required to access getAttribute() function
+    * document.getElementById('title').getAttribute() => argument required to access getAttribute() function
 
     document.getElementById('title').getAttribute('id') => 'title'
-
+   
     document.getElementById('title').getAttribute('class') => 'heading'
 
+    *document.getElementById('title').setAttribute('class','test')  =>undefined ,always override now class willset to test
+
+    document.getElementById('title').getAttribute('class','test heading) => undefined ,now heading will be set 
+
+    * const title = document.getElementById('title')
+
+      title.style.backgroundColor = 'red' => set to red color
+      
+      title.style.padding = '15px' => set padding      
     
+      all the style properties can we use,
 
+    * --------IMPORTANT/INTERSTING(How to add content)--------
 
+    * title.textContent => dom (document object model) learning  from chai aur code test text | note: whole text will be show/visible
+     
+    * title.innerHtml => 'dom (document object model) learning  from chai aur code <span style="display: none;">test text</span>' | note: visible whole html text with inner html 
 
+    * title.innerText => dom (document object model) learning  from chai aur code |note:return text that actually visible 
 
+    * document.getElementByClassName('heading') => html collection
+ 
+    * document.querySelector('h1') => <h1 id=" title">dom (document object model) learning  from chai aur code <span style="display: none;">test text</span></h1> | will return first h1
 
+    * document.querySelector('#title') =><h1 id=" title">dom (document object model) learning  from chai aur code <span style="display: none;">test text</span></h1> | return title 
 
+    *document.querySelector('.heading') => return heading 
+
+    * document.querySelector('#title') => return title
+
+    * document.querySelector('input[type="password"]') => return input type tag
+
+    * const myurl = document.querySelector('ul') => return all list item
+      
+       myurl.querySelector('li') => first item return
+
+       const turngreen =   myurl.querySelector('li') => undefined
+
+       turngreen.style.backgroundColor = "green" => green text appear 
+
+       turngreen.style.padding = "10px"
+
+       turngreen.innerText => one
+
+       turngreen.innerText = 'five' => five
+
+    * query selector all
+
+      document.quesrySelectorAll('li') => NodeList(3)[li,li,li]  also prototypr ,nodelist behave like a array but not a array and make use it with for-each loop 
+
+      const templiList =  document.quesrySelectorAll('li') => templiList ->nodelist,prototype : for-each etc but not map 
+
+      templiList.style.color ='green' ||not possible
+      alternate 
+      templiList[0].style.color = 'green'
+
+    * const myH1 = document.querySelectoAll('h1')
+
+      myH1.style.color= 'green' ||not possible 
+
+      myH1[0].style.color= 'green' ||possible 
+
+      templiList.forEach(function (li){
+        l.style.backgroundColor ='green'
+      })
+
+      document.getElementByClassName('list-item') => return html collection,not present loop in prototype(mtln ki kya kya use kr skte hai es perticular condition par )
+      alternate for array
+
+      const tempclassList = document.getElementByClassName('list-item')
+      Array.from(tempclassList) => return convert into array 
+
+      const myConvertedArray = Array.from(tempclassList)
+      myConvertedArray => return array
+      myConvertedArray.forEach(function(li){
+        li.style.color = 'orange'
+      }) => return into orange colour
+ 
+
+      
 
 -->
