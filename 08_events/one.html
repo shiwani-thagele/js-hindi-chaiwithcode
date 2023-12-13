@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML Events</title>
+</head>
+<body style="background-color: #424242; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+     // 1. in js every events run sequntially 
+    // 2. event sholud not inject in html to reduce problem in code instead do
+    //method-2
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked ")
+    // }
+    //but this approach is not recmmended , coz jab aap id par onclick event laga rhae hai toh onclik pr kuch problem ho sakti hai kyuki aapko bhot jyada information nahi milti hai apko EVENTLISTNERS use karna chahaiye they give us propogation ability 
+    //method-3
+      document.getElementById('owl').addEventListener('click',function(){
+          alert("owl clicked again ")
+
+      }) 
+      //third parameter is false defalut  -> document.getElementById('owl').addEventListener('click',function(){},false) , in interview this question will asked , 
+      // method -4 attachEvenet()
+      //method -5 jQuery - on method 
+
+
+      //3. event Object
+      document.getElementById('owl').addEventListener('click',function(e){
+          alert("owl clicked again ")
+
+      }) 
+
+</script>
+</html>
