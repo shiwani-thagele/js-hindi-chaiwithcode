@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more about Async</title>
+</head>
+<body>
+<h1>Hellow javascript next lecture!</h1>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+</body>
+<script>
+   //1.  setInterval()
+   //    setInterval(function(){
+   // console.log("shiwani",Date.now());
+   //    },1000)
+
+   //2.
+   const sayDate = function(str){
+   console.log(str,Date.now());
+   }
+
+   //3.
+   const intervalId = setInterval(sayDate,1000,"settimeout")
+   clearInterval(intervalId)
+
+   //5. Assignment
+   // Variable to store the interval ID
+   let interval; 
+
+    // Function to be called at each interval
+    const saydate = function() {
+        console.log("setInterval", Date.now());
+    }
+
+    document.getElementById('start').addEventListener('click', startInterval);
+    document.getElementById('stop').addEventListener('click', stopInterval);
+
+    function startInterval() {
+        // Start the interval and store the interval ID
+        interval = setInterval(saydate, 1000);
+    }
+
+    function stopInterval() {
+        // Stop the interval using the stored interval ID
+        clearInterval(interval);
+        console.log("Interval stopped");
+    }
+    
+</script>
+
+
+</html>
+

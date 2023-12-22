@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async() project</title>
+</head>
+<body>
+<h1>Hellow javascript!</h1>
+<button id="stop">stop</button>
+</body>
+<script>
+    // setTimeout() - core javascript part nahi hai , browser ke pass hote hai , ek bar kar skte hai kaam ,clearTimeout() padna hai,handler ek call back hi hai but kabhi kabhi uske naam bhi hota hai 
+    //1.   setTimeout(function () {
+    //     console.log("shiwani");
+    //     },2000);
+
+    //2.
+      const sayShiwani = function(){
+        console.log("shiwani");
+      }
+
+      //4.
+     const changeText= function () {
+        document.querySelector('h1').innerHTML = "best js series"
+     } 
+
+     //5.
+    const changeMe=  setTimeout(changeText,2000) //referenece of that function -2.
+
+    //3.
+     setTimeout(sayShiwani,2000) //referenece of that function -1.
+
+    //6.
+      //clearTimeout(changeMe) //stop that event,but not worthy , if we use cleartimeout() instant after settimeout(),so we use some even with that.
+
+    //7.
+    document.querySelector('#stop').addEventListener('click',function() {
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+
+</script>
+</html>
