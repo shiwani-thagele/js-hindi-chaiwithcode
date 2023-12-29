@@ -135,3 +135,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
 })
 .then((data)=>{console.log(data)})
 .catch((error)=> console.log(error))
+
+//question fetch() where you get 404 error, reolve or reject  -> we get so we get it in resolve. mdn docs**
+//-https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+//on diagram 
