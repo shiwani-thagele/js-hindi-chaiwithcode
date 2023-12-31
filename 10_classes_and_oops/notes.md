@@ -36,8 +36,15 @@ object literal
 - step-4 you will get that data on function call. 
 
 
+# prototype - javascriot prototype behaviour
+# in browser if you create an array,object and if you try to get that value you will se a term prototype : array()/object ,this is beacause of javascripts prototypal nature/behaviour
 
+# Prototypes are the mechanism by which JavaScript objects inherit features from one another
 
+ ## Array ----> object ----> null
 
+ ## String ----> object ----> null
+
+ ## function ----> object ----> null 
 
 
